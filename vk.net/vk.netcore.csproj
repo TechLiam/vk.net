@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Version>0.1.0</Version>
+    <Authors>JP Bruyère</Authors>
+    <Description>Vulkan low level bindings</Description>
+    <Copyright>Copyright 2019 JP Bruyère</Copyright>        
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>        
+    <OutputPath>$(SolutionDir)build\$(TargetFramework)\$(Configuration)</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)build\$(TargetFramework)\obj\$(Configuration)</IntermediateOutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>  
+  <ItemGroup>    
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>    
+    <Compile Include="vk/**/*.cs" />
+  </ItemGroup>
+    <Target Name="AfterBuild" >
+        <Message Text="First occurrence" />
+    </Target>    
+  <Target Name="rewrite" AfterTargets="Compile">
+    <Exec Condition="$(OS) == 'Windows_NT'" Command="$(SolutionDir)build/$(TargetFramework)rewrite/vk.rewrite.exe $(OutputPath)vk.net.dll" />
+    <Exec Condition="$(OS) != 'Windows_NT'"
+          Command="dotnet $(SolutionDir)build/$(TargetFramework)/rewrite/vk.rewrite.exe $(OutputPath)vk.net.dll"
+          ConsoleToMSBuild="true" EchoOff="true">
+        <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+  </Target>      
+</Project>
+<!--<ItemGroup Condition="'$(TargetFramework)'=='net472'">
+   <Reference Include="System.ComponentModel.DataAnnotations" />
+   <Reference Include="System.configuration" />
+</ItemGroup>
+<ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+   <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+</ItemGroup>-->    

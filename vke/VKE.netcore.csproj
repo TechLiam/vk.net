@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Version>0.1.0</Version>
+    <Authors>JP Bruyère</Authors>
+    <Description>VKE sample</Description>
+    <Copyright>Copyright 2019 JP Bruyère</Copyright>        
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>        
+    <OutputPath>$(SolutionDir)build\$(TargetFramework)\$(Configuration)</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)build\$(TargetFramework)\obj\$(Configuration)</IntermediateOutputPath>            
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vk.net\vk.net.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="glTF2Loader" Version="1.1.3-alpha" />    
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
+  </ItemGroup>  
+</Project>

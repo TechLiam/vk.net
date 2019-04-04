@@ -1,0 +1,60 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{A2A2849A-0032-4AA8-BC0E-82C69D7DE354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle.netcore", "samples\Triangle\Triangle.netcore.csproj", "{4CC28D3F-FEDB-4CC5-AF03-8FE71CCCE2FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vk.netcore", "vk.net\vk.netcore.csproj", "{8B3A3141-D671-47F1-8967-4851C9C02BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vk.rewrite", "vk.rewrite\vk.rewrite.csproj", "{F41EA96F-A9F7-4E85-B2EE-5757C5FAD00D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VKE.netcore", "vke\VKE.netcore.csproj", "{FD078F8C-C673-4000-8017-8098DA319E54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CC28D3F-FEDB-4CC5-AF03-8FE71CCCE2FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC28D3F-FEDB-4CC5-AF03-8FE71CCCE2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC28D3F-FEDB-4CC5-AF03-8FE71CCCE2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B3A3141-D671-47F1-8967-4851C9C02BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B3A3141-D671-47F1-8967-4851C9C02BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B3A3141-D671-47F1-8967-4851C9C02BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B3A3141-D671-47F1-8967-4851C9C02BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F41EA96F-A9F7-4E85-B2EE-5757C5FAD00D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41EA96F-A9F7-4E85-B2EE-5757C5FAD00D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41EA96F-A9F7-4E85-B2EE-5757C5FAD00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41EA96F-A9F7-4E85-B2EE-5757C5FAD00D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD078F8C-C673-4000-8017-8098DA319E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD078F8C-C673-4000-8017-8098DA319E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD078F8C-C673-4000-8017-8098DA319E54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4CC28D3F-FEDB-4CC5-AF03-8FE71CCCE2FF} = {A2A2849A-0032-4AA8-BC0E-82C69D7DE354}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.FileWidth = 80
+		$1.NoTabsAfterNonTabs = True
+		$1.EolMarker = Unix
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.LabelPositioning = LeftMost
+		$2.NewLinesForBracesInTypes = False
+		$2.NewLinesForBracesInMethods = False
+		$2.NewLinesForBracesInProperties = False
+		$2.NewLinesForBracesInAccessors = False
+		$2.NewLinesForBracesInControlBlocks = False
+		$2.NewLinesForBracesInObjectCollectionArrayInitializers = False
+		$2.NewLineForElse = False
+		$2.NewLineForCatch = False
+		$2.NewLineForFinally = False
+		$2.SpacingAfterMethodDeclarationName = True
+		$2.SpaceAfterMethodCallName = True
+		$2.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal

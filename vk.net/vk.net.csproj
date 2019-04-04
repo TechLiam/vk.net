@@ -56,12 +56,6 @@
     <Compile Include="vk\Generated\Structures.gen.cs" />
     <Compile Include="vk\Generated\Unions.gen.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\vk.rewrite\vk.rewrite.csproj">
-      <Project>{F41EA96F-A9F7-4E85-B2EE-5757C5FAD00D}</Project>
-      <Name>vk.rewrite</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 
   <Target Name="AfterBuild">

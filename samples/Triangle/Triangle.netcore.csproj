@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+<!--    <TargetFramework>netstandard2.0</TargetFramework>-->
+    <OutputType>Exe</OutputType>        
+    <Version>0.1.0</Version>
+    <Authors>JP Bruyère</Authors>
+    <Description>VKE sample</Description>
+    <Copyright>Copyright 2019 JP Bruyère</Copyright>        
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>        
+    <OutputPath>$(SolutionDir)build\$(Configuration)\samples\Triangle</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)build\obj\$(Configuration)</IntermediateOutputPath>        
+  </PropertyGroup>
+  <ItemGroup>
+    <GLSLShader Include="shaders\**\*.frag;shaders\**\*.vert" />            
+  </ItemGroup>  
+  <ItemGroup>
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\vke\VKE.csproj" />
+    <ProjectReference Include="..\..\vk.net\vk.net.csproj" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)spirv.targets" />
+</Project>
+
+
